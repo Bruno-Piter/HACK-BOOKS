@@ -493,4 +493,17 @@
   }
 }
 
-https://uiverse.io/ashif_6672/brown-pig-92
+.art img {
+  max-height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 12px #ff5e00);
+}
+
+.art .subs {
+  position: absolute;
+  z-index: 3;
+}

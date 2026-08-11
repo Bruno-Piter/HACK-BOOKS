@@ -2,18 +2,25 @@ type PreviewOptions = {
   html: string
   css: string
   background?: string
+  useTailwind?: boolean
 }
 
 export function buildPreviewDocument({
   html,
   css,
   background = '#0a0c10',
+  useTailwind = false,
 }: PreviewOptions) {
+  const tailwind = useTailwind
+    ? `<script src="https://cdn.tailwindcss.com"><\/script>`
+    : ''
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  ${tailwind}
   <style>
     html, body {
       margin: 0;

@@ -15,6 +15,18 @@ import zoroarkHtml from './cards/hisuian-zoroark-tcg/component.html?raw'
 import zoroarkCss from './cards/hisuian-zoroark-tcg/component.css?raw'
 import tyranitarHtml from './cards/tyranitar-status/component.html?raw'
 import tyranitarCss from './cards/tyranitar-status/component.css?raw'
+import unluckyGoatHtml from './loaders/unlucky-goat-90/component.html?raw'
+import unluckyGoatCss from './loaders/unlucky-goat-90/component.css?raw'
+import tameSlothHtml from './loaders/tame-sloth-13/component.html?raw'
+import tameSlothCss from './loaders/tame-sloth-13/component.css?raw'
+import sillyYakHtml from './loaders/silly-yak-46/component.html?raw'
+import sillyYakCss from './loaders/silly-yak-46/component.css?raw'
+import modernTermiteHtml from './loaders/modern-termite-44/component.html?raw'
+import modernTermiteCss from './loaders/modern-termite-44/component.css?raw'
+import hungryPigHtml from './loaders/hungry-pig-40/component.html?raw'
+import hungryPigCss from './loaders/hungry-pig-40/component.css?raw'
+import plasticRabbitHtml from './inputs/plastic-rabbit-38/component.html?raw'
+import plasticRabbitCss from './inputs/plastic-rabbit-38/component.css?raw'
 
 export const categories: Category[] = [
   { id: 'tickets', label: 'Tickets' },
@@ -70,7 +82,7 @@ export const catalog: CatalogItem[] = [
     name: 'Garchomp · Divine',
     category: 'cards',
     author: 'Dragon / Ground',
-    sourceUrl: 'https://uiverse.io/AatreyuShau/lovely-pig-54',
+    sourceUrl: '',
     html: garchompHtml,
     css: garchompCss,
     previewBg: '#08071d',
@@ -80,7 +92,7 @@ export const catalog: CatalogItem[] = [
     name: 'Mewtwo · Mythic',
     category: 'cards',
     author: 'Psychic',
-    sourceUrl: 'https://uiverse.io/chirayu-lab/rotten-sloth-56',
+    sourceUrl: '',
     html: mewtwoHtml,
     css: mewtwoCss,
     previewBg: '#000',
@@ -90,7 +102,7 @@ export const catalog: CatalogItem[] = [
     name: 'Hisuian Zoroark · TCG',
     category: 'cards',
     author: 'Ghost / Normal',
-    sourceUrl: 'https://uiverse.io/ashif_6672/brown-pig-92',
+    sourceUrl: '',
     html: zoroarkHtml,
     css: zoroarkCss,
     previewBg: '#1a1520',
@@ -100,10 +112,71 @@ export const catalog: CatalogItem[] = [
     name: 'Tyranitar · Status',
     category: 'cards',
     author: 'Rock / Dark',
-    sourceUrl: 'https://uiverse.io/the_5814/hot-turkey-82',
+    sourceUrl: '',
     html: tyranitarHtml,
     css: tyranitarCss,
     previewBg: '#050a0f',
+  },
+  {
+    id: 'unlucky-goat-90',
+    name: 'Solid 3D Spinner',
+    category: 'loaders',
+    author: 'Polyhedron',
+    sourceUrl: '',
+    html: unluckyGoatHtml,
+    css: unluckyGoatCss,
+    previewBg: '#0a0a0c',
+  },
+  {
+    id: 'tame-sloth-13',
+    name: 'Nucleus Rings',
+    category: 'loaders',
+    author: 'Orbital',
+    sourceUrl: '',
+    html: tameSlothHtml,
+    css: tameSlothCss,
+    previewBg: '#050508',
+  },
+  {
+    id: 'silly-yak-46',
+    name: 'Perspective Grid',
+    category: 'loaders',
+    author: 'Grid Warp',
+    sourceUrl: '',
+    html: sillyYakHtml,
+    css: sillyYakCss,
+    previewBg: '#000010',
+  },
+  {
+    id: 'modern-termite-44',
+    name: 'Sphere Cluster',
+    category: 'loaders',
+    author: '3D Orbs',
+    sourceUrl: '',
+    html: modernTermiteHtml,
+    css: modernTermiteCss,
+    previewBg: '#000',
+  },
+  {
+    id: 'hungry-pig-40',
+    name: 'Star Cracks',
+    category: 'loaders',
+    author: 'Preloader',
+    sourceUrl: '',
+    html: hungryPigHtml,
+    css: hungryPigCss,
+    previewBg: '#0c0a10',
+  },
+  {
+    id: 'plastic-rabbit-38',
+    name: 'Quantum Nexus',
+    category: 'inputs',
+    author: 'AI Engine Panel',
+    sourceUrl: '',
+    html: plasticRabbitHtml,
+    css: plasticRabbitCss,
+    previewBg: '#030712',
+    useTailwind: true,
   },
 ]
 

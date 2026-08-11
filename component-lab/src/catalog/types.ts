@@ -9,6 +9,8 @@ export type CatalogItem = {
   html: string
   css: string
   previewBg?: string
+  /** Usa Tailwind CDN no iframe de preview (componentes com utility classes). */
+  useTailwind?: boolean
 }
 
 export type Category = {

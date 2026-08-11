@@ -62,6 +62,10 @@ function App() {
       }
     >
       <aside className="sidebar">
+        <div className="brand">
+          <p className="brand__mark">Component Lab</p>
+          <p className="brand__sub">Loja local · tickets &amp; game cards</p>
+        </div>
 
         <nav className="tabs" aria-label="Categorias">
           {categories.map((tab) => {
@@ -152,6 +156,7 @@ function App() {
               html={html}
               css={css}
               background={selected.previewBg}
+              useTailwind={selected.useTailwind}
             />
           ) : (
             <div className="preview-empty">Sem preview</div>

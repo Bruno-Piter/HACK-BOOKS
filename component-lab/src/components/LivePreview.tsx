@@ -5,9 +5,15 @@ type LivePreviewProps = {
   html: string
   css: string
   background?: string
+  useTailwind?: boolean
 }
 
-export function LivePreview({ html, css, background }: LivePreviewProps) {
+export function LivePreview({
+  html,
+  css,
+  background,
+  useTailwind,
+}: LivePreviewProps) {
   const deferredHtml = useDeferredValue(html)
   const deferredCss = useDeferredValue(css)
 
@@ -17,8 +23,9 @@ export function LivePreview({ html, css, background }: LivePreviewProps) {
         html: deferredHtml,
         css: deferredCss,
         background,
+        useTailwind,
       }),
-    [deferredHtml, deferredCss, background],
+    [deferredHtml, deferredCss, background, useTailwind],
   )
 
   return (

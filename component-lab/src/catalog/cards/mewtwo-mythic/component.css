@@ -3,8 +3,8 @@
    ========================= */
 
 .uiverse-mythic-card {
-  --mythic: #ef4444;
-  --mythic-soft: rgba(239, 68, 68, 0.25);
+  --mythic: #a855f7;
+  --mythic-soft: rgba(168, 85, 247, 0.25);
   font-family:
     system-ui,
     -apple-system,
@@ -46,7 +46,7 @@
 
 /* ====== MYTHIC GLOW ====== */
 .uiverse-mythic-card .mythic {
-  border: 1px solid rgba(239, 68, 68, 0.7);
+  border: 1px solid rgba(168, 85, 247, 0.7);
 }
 
 .uiverse-mythic-card .mythic::before {
@@ -100,7 +100,7 @@
 /* ====== HOVER ====== */
 .uiverse-mythic-card .card:hover {
   transform: rotateX(14deg) rotateY(-16deg) scale(1.07);
-  box-shadow: 0 60px 140px rgba(239, 68, 68, 0.55);
+  box-shadow: 0 60px 140px rgba(168, 85, 247, 0.55);
 }
 
 /* ====== ART ====== */
@@ -189,7 +189,7 @@
 
 /* ====== ABILITY ====== */
 .uiverse-mythic-card .ability {
-  background: rgba(239, 68, 68, 0.12);
+  background: rgba(168, 85, 247, 0.12);
   border-left: 3px solid var(--mythic);
   padding: 10px;
   border-radius: 8px;
@@ -197,7 +197,7 @@
 }
 
 .uiverse-mythic-card .ability-title {
-  color: #fecaca;
+  color: #e9d5ff;
   margin-bottom: 4px;
 }
 
@@ -233,7 +233,7 @@
   z-index: 0;
   background: radial-gradient(
       circle at top,
-      rgba(239, 68, 68, 0.25),
+      rgba(168, 85, 247, 0.25),
       transparent 60%
     ),
     radial-gradient(
@@ -250,4 +250,12 @@
   z-index: 1;
 }
 
-https://uiverse.io/the_5814/hot-turkey-82
+.uiverse-mythic-card .art img {
+  max-height: 140px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 20px auto 0;
+  position: relative;
+  z-index: 1;
+}
