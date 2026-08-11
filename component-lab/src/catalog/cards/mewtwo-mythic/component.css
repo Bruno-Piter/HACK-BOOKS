@@ -1,0 +1,253 @@
+/* =========================
+   UIVERSE MYTHIC CARD
+   ========================= */
+
+.uiverse-mythic-card {
+  --mythic: #ef4444;
+  --mythic-soft: rgba(239, 68, 68, 0.25);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+  background: radial-gradient(circle, #120909, #000);
+}
+
+/* ====== DECK ====== */
+.uiverse-mythic-card .deck {
+  perspective: 1400px;
+}
+
+/* ====== CARD ====== */
+.uiverse-mythic-card .card {
+  width: 320px;
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  background: linear-gradient(180deg, #0c0c14, #020205),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.9),
+    inset 0 0 40px rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.7s;
+}
+
+/* ====== MYTHIC GLOW ====== */
+.uiverse-mythic-card .mythic {
+  border: 1px solid rgba(239, 68, 68, 0.7);
+}
+
+.uiverse-mythic-card .mythic::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent, var(--mythic), transparent);
+  filter: blur(18px);
+  opacity: 0.6;
+  z-index: -1;
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* ====== HOLOGRAM ====== */
+.uiverse-mythic-card .mythic::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.35),
+    transparent 65%
+  );
+  background-size: 200% 200%;
+  mix-blend-mode: overlay;
+  animation: holo 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes holo {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* ====== HOVER ====== */
+.uiverse-mythic-card .card:hover {
+  transform: rotateX(14deg) rotateY(-16deg) scale(1.07);
+  box-shadow: 0 60px 140px rgba(239, 68, 68, 0.55);
+}
+
+/* ====== ART ====== */
+.uiverse-mythic-card .art {
+  height: 180px;
+  position: relative;
+  background: radial-gradient(
+      circle at center,
+      var(--mythic-soft),
+      transparent 65%
+    ),
+    linear-gradient(135deg, #2b0f0f, #040406);
+}
+
+/* ====== PARTICLES ====== */
+.uiverse-mythic-card .art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+  opacity: 0.12;
+  animation: particles 10s linear infinite;
+}
+
+@keyframes particles {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 240px 240px;
+  }
+}
+
+/* ====== COST ====== */
+.uiverse-mythic-card .cost {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--mythic);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  box-shadow: 0 0 25px var(--mythic);
+}
+
+/* ====== CONTENT ====== */
+.uiverse-mythic-card .content {
+  padding: 18px;
+  color: #f5f5f5;
+}
+
+.uiverse-mythic-card .title {
+  font-size: 22px;
+  letter-spacing: 0.6px;
+}
+
+.uiverse-mythic-card .type {
+  font-size: 12px;
+  opacity: 0.65;
+  margin-bottom: 12px;
+}
+
+/* ====== STATS ====== */
+.uiverse-mythic-card .stats {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ====== STATUS ====== */
+.uiverse-mythic-card .status span {
+  margin-right: 6px;
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+/* ====== ABILITY ====== */
+.uiverse-mythic-card .ability {
+  background: rgba(239, 68, 68, 0.12);
+  border-left: 3px solid var(--mythic);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.uiverse-mythic-card .ability-title {
+  color: #fecaca;
+  margin-bottom: 4px;
+}
+
+/* ====== FLAVOR ====== */
+.uiverse-mythic-card .flavor {
+  margin-top: 12px;
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+/* ====== RARITY ====== */
+.uiverse-mythic-card .rarity {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--mythic);
+}
+/* ====== COMPONENT WRAPPER ====== */
+.uiverse-mythic-card {
+  position: relative;
+  padding: 48px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+/* ====== BACKGROUND LAYER ====== */
+.uiverse-mythic-card .bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+      circle at top,
+      rgba(239, 68, 68, 0.25),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba(255, 255, 255, 0.05),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #0b0505, #000);
+}
+
+/* ensure card stays above background */
+.uiverse-mythic-card .deck {
+  position: relative;
+  z-index: 1;
+}
+
+https://uiverse.io/the_5814/hot-turkey-82

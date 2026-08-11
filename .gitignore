@@ -8,6 +8,10 @@ survivorforge-cursor-rules/
 vercel-ai/
 cursor-community-plugins/
 
+# App local
+component-lab/node_modules/
+component-lab/dist/
+
 # Sistema / IDE
 .DS_Store
 Thumbs.db

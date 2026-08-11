@@ -1,0 +1,123 @@
+.sl-status-card {
+  width: 320px;
+  background-color: #050a0f;
+  border: 2px solid #00f2ff;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+}
+
+.sl-card-header {
+  display: flex;
+  align-items: center;
+}
+
+.sl-rank-box {
+  border: 1px solid #00f2ff;
+  padding: 5px 15px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.sl-rank-lbl {
+  display: block;
+  font-size: 10px;
+  color: #00f2ff;
+}
+
+.sl-rank-val {
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00f2ff;
+}
+
+.sl-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.sl-p-name {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sl-p-job {
+  font-size: 11px;
+  color: #00f2ff;
+  font-weight: bold;
+}
+
+.sl-neon-divider {
+  height: 1px;
+  background: #00f2ff;
+  margin: 15px 0;
+  box-shadow: 0 0 5px #00f2ff;
+}
+
+.sl-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sl-stat-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-left: 3px solid #00f2ff;
+}
+
+.sl-stat-lbl {
+  display: block;
+  font-size: 10px;
+  color: #00f2ff;
+  font-weight: bold;
+}
+
+.sl-stat-num {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sl-resource-area {
+  margin-top: 15px;
+}
+
+.sl-res-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #00f2ff;
+  margin-bottom: 2px;
+}
+
+.sl-bar-bg {
+  height: 6px;
+  background: #000;
+  margin-bottom: 10px;
+}
+
+.sl-bar-fill {
+  height: 100%;
+}
+
+.sl-hp {
+  width: 100%;
+  background: #ff003c;
+}
+.sl-mp {
+  width: 100%;
+  background: #00f2ff;
+}
+
+.sl-system-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 10px;
+  color: #00f2ff;
+  background: rgba(0, 242, 255, 0.1);
+  padding: 5px;
+  border: 1px solid rgba(0, 242, 255, 0.3);
+}
